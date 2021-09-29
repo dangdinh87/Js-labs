@@ -121,4 +121,33 @@ function Bai6DeQuy(x, n) {
 // console.log(Bai6(2, 2));
 console.log(Bai6DeQuy(2, 2));
 
-//
+//*Bài 7: Tìm tổng Dãy fibonacci
+
+function fibonacci(n) {
+  if (n <= 0) return 0;
+  if (n === 0 || n === 1) return n;
+  let temp1 = 0;
+  let temp2 = 1;
+  let sum = 1;
+  for (let i = 2; i < n; i++) {
+    temp1 = temp2;
+    temp2 = sum;
+    sum = temp1 + temp2;
+
+    // sum += i - 2 + (i - 1);
+  }
+  return sum;
+}
+
+console.log(fibonacci(5));
+
+//* Đệ quy
+function fibonacci1(n) {
+  console.log(n);
+  if (n <= 0) return 0;
+  if (n === 0 || n === 1) return n;
+
+  return fibonacci1(n - 1) + fibonacci1(n - 2);
+}
+
+console.log(fibonacci1(6));

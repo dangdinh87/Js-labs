@@ -38,34 +38,3 @@ function timUocLeLonNhat(n) {
 
 console.log(timUocLeLonNhat(100));
 
-//*Kiem tra so nguyen to, so hoan thien, so chinh phuong
-function kiemTraSoNguyenTo(n) {
-  if (n < 2) {
-    return false;
-  }
-  for (let i = 2; i <= Math.sqrt(n); i++) {
-    if (n % i === 0) {
-      return false;
-    }
-  }
-
-  return true;
-}
-
-console.log(kiemTraSoNguyenTo(7));
-console.log(kiemTraSoNguyenTo(8));
-
-function kiemTraSoHoanHao(n) {
-  if (n < 1) return false;
-
-  let sum = 0;
-  for (let i = 1; i < n; i++) {
-    if (n % i === 0) {
-      sum += i;
-    }
-  }
-
-  return sum === n ? true : false;
-}
-
-console.log(kiemTraSoHoanHao(28));
